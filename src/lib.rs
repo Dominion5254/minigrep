@@ -27,6 +27,7 @@ pub struct Config {
 impl Config {
   // pub fn build(args: &[String]) -> Result<Config, &'static str> {
   pub fn build(mut args: impl Iterator<Item = String>,) -> Result<Config, &'static str> {
+      args.next();
       // if args.len() < 3 {
       //     return Err("not enough arguments");
       // }
